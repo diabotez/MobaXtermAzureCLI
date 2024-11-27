@@ -2,7 +2,7 @@
 
 # Check if Windows AzureCLI is installed
 echo "Checking prerequisites"
-if [ -e /mnt/c/Program\ Files\ \(x86\)/Microsoft\ SDKs/Azure/CLI2/python.exe ]
+if [ -e /mnt/c/Program\ Files/Microsoft\ SDKs/Azure/CLI2/python.exe ]
 then
     echo "Found Windows Azure CLI proceed."
 else
@@ -14,7 +14,7 @@ fi
 
 # Download AzureCLI Wrapper
 echo "Downloading AzureCLI Wrapper from GitHub"
-curl --insecure https://raw.githubusercontent.com/abeckDev/MobaXtermAzureCLI/master/AzureCli.sh --output /usr/bin/az
+mv AzureCli.sh /usr/bin/az
 
 # Making it executable
 chmod +x /usr/bin/az
